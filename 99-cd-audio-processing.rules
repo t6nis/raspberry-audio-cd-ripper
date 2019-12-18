@@ -1,0 +1,2 @@
+#/etc/udev/rules.d/99-cd-audio-processing.rules
+SUBSYSTEM=="block", KERNEL=="sr0", ACTION=="change", RUN{program}+="/bin/bash - '/usr/local/sbin/audio-cd-rip.sh'"
